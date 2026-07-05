@@ -1,0 +1,32 @@
+# Agent Website Design Skills
+
+Open-source AI agent skills for website design, landing pages, design systems, responsive UI QA, conversion polish, and accessibility.
+
+Repository: https://github.com/divyanshu-iitian/agent-website-design-skills
+Catalog: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/skills.json
+
+## Skills
+
+- web-visual-direction: Create strong visual direction for websites and web apps. Use for mood, layout language, typography, palette, imagery, art direction, motion feel, and first-screen impression.
+  - Skill file: web-visual-direction/SKILL.md
+  - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-visual-direction/SKILL.md
+
+- web-design-system: Create or refine practical website design systems. Use for tokens, component rules, responsive constraints, interaction states, and accessibility defaults.
+  - Skill file: web-design-system/SKILL.md
+  - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-design-system/SKILL.md
+
+- landing-page-craft: Design and implement high-quality landing pages and marketing websites. Use for homepages, product pages, launch pages, pricing pages, waitlists, and conversion-focused website flows.
+  - Skill file: landing-page-craft/SKILL.md
+  - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/landing-page-craft/SKILL.md
+
+- responsive-ui-qa: Verify and fix responsive website UI quality. Use for desktop/mobile QA, overflow, overlap, blank canvases, broken navigation, unstable grids, and viewport-specific regressions.
+  - Skill file: responsive-ui-qa/SKILL.md
+  - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/responsive-ui-qa/SKILL.md
+
+- conversion-accessibility-polish: Improve website clarity, conversion, trust, and accessibility. Use for CTAs, forms, navigation, pricing, empty states, contrast, keyboard behavior, semantic HTML, and decision flow.
+  - Skill file: conversion-accessibility-polish/SKILL.md
+  - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/conversion-accessibility-polish/SKILL.md
+
+## Agent Guidance
+
+Load only the skill relevant to the current task. Read its SKILL.md first, then read referenced files only when the skill instructs you to.

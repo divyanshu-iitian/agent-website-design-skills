@@ -1,0 +1,48 @@
+{
+  "name": "agent-website-design-skills",
+  "description": "Open-source AI agent skills for website design, landing pages, design systems, responsive UI QA, accessibility, and conversion polish.",
+  "repository": "https://github.com/divyanshu-iitian/agent-website-design-skills",
+  "license": "MIT",
+  "skills": [
+    {
+      "name": "web-visual-direction",
+      "display_name": "Web Visual Direction",
+      "path": "web-visual-direction/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-visual-direction/SKILL.md",
+      "default_prompt": "Use $web-visual-direction to define the visual direction for this website.",
+      "tags": ["website-design", "art-direction", "ui-design", "visual-design", "frontend"]
+    },
+    {
+      "name": "web-design-system",
+      "display_name": "Web Design System",
+      "path": "web-design-system/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-design-system/SKILL.md",
+      "default_prompt": "Use $web-design-system to create a practical design system for this site.",
+      "tags": ["design-system", "design-tokens", "components", "frontend", "accessibility"]
+    },
+    {
+      "name": "landing-page-craft",
+      "display_name": "Landing Page Craft",
+      "path": "landing-page-craft/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/landing-page-craft/SKILL.md",
+      "default_prompt": "Use $landing-page-craft to design and implement a strong landing page.",
+      "tags": ["landing-page", "marketing-site", "conversion", "copywriting", "web-design"]
+    },
+    {
+      "name": "responsive-ui-qa",
+      "display_name": "Responsive UI QA",
+      "path": "responsive-ui-qa/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/responsive-ui-qa/SKILL.md",
+      "default_prompt": "Use $responsive-ui-qa to inspect and fix responsive UI issues.",
+      "tags": ["responsive-design", "ui-qa", "mobile", "browser-testing", "frontend"]
+    },
+    {
+      "name": "conversion-accessibility-polish",
+      "display_name": "Conversion Accessibility Polish",
+      "path": "conversion-accessibility-polish/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/conversion-accessibility-polish/SKILL.md",
+      "default_prompt": "Use $conversion-accessibility-polish to improve this page's conversion and accessibility.",
+      "tags": ["accessibility", "conversion-rate-optimization", "ux-writing", "forms", "a11y"]
+    }
+  ]
+}
