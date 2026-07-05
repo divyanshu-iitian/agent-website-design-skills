@@ -1,0 +1,37 @@
+name: Skill improvement
+description: Suggest an improvement to an existing website design skill
+title: "[Skill]: "
+labels: ["skill-improvement"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - web-visual-direction
+        - web-design-system
+        - landing-page-craft
+        - responsive-ui-qa
+        - conversion-accessibility-polish
+        - repository metadata
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What does the current skill miss or get wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example prompt or use case
+      description: Add a realistic agent prompt if you have one.

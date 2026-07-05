@@ -1,0 +1,32 @@
+name: New skill request
+description: Propose a new website design skill for the collection
+title: "[New skill]: "
+labels: ["new-skill"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Proposed skill name
+      description: Use lowercase hyphen-case if possible.
+      placeholder: ecommerce-product-page-craft
+    validations:
+      required: true
+  - type: textarea
+    id: prompts
+    attributes:
+      label: Example prompts
+      description: What would users ask an agent to do with this skill?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why separate?
+      description: Why should this be a new skill instead of improving an existing one?
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: References or assets
+      description: What references, templates, or examples would help?

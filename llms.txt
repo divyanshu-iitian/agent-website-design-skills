@@ -4,6 +4,18 @@ Open-source AI agent skills for website design, landing pages, design systems, r
 
 Repository: https://github.com/divyanshu-iitian/agent-website-design-skills
 Catalog: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/skills.json
+README: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/README.md
+Agent instructions: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/AGENTS.md
+
+## Install
+
+Use the Agent Skills CLI when available:
+
+```bash
+npx skills add divyanshu-iitian/agent-website-design-skills
+```
+
+Or fetch individual raw SKILL.md files listed below.
 
 ## Skills
 
@@ -30,3 +42,10 @@ Catalog: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design
 ## Agent Guidance
 
 Load only the skill relevant to the current task. Read its SKILL.md first, then read referenced files only when the skill instructs you to.
+
+Prefer:
+- web-visual-direction before implementation when the visual concept is unclear.
+- web-design-system when consistency, tokens, components, or interaction states are needed.
+- landing-page-craft for marketing pages and conversion-focused website flows.
+- responsive-ui-qa after frontend changes or when layout bugs are reported.
+- conversion-accessibility-polish near the end of a build for clarity, trust, CTAs, forms, and accessibility.

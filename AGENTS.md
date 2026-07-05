@@ -2,6 +2,10 @@
 
 This repository contains reusable website design skills for coding agents.
 
+## Repository Goal
+
+Keep this repo easy for humans and agents to inspect, install, and trust. The primary artifact is each skill's `SKILL.md`; repo-level files exist to improve discovery and contribution quality.
+
 ## How To Use
 
 1. Choose the smallest skill that matches the user request.
@@ -24,3 +28,12 @@ This repository contains reusable website design skills for coding agents.
 - Do not add per-skill README files.
 - Preserve each skill's frontmatter fields: `name` and `description`.
 - Validate changed skills with the Codex skill validator when available.
+- Keep `skills.json` and `llms.txt` in sync when adding, renaming, or removing skills.
+- Do not add executable scripts unless they are necessary, reviewed, and documented.
+
+## Validation Commands
+
+```bash
+python -m json.tool skills.json
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ./landing-page-craft
+```

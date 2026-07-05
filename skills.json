@@ -3,6 +3,24 @@
   "description": "Open-source AI agent skills for website design, landing pages, design systems, responsive UI QA, accessibility, and conversion polish.",
   "repository": "https://github.com/divyanshu-iitian/agent-website-design-skills",
   "license": "MIT",
+  "format": "Agent Skills",
+  "compatibility": [
+    "Codex",
+    "Claude Code",
+    "Cursor",
+    "GitHub Copilot",
+    "Gemini CLI",
+    "OpenCode",
+    "skill-compatible AI coding agents"
+  ],
+  "install": {
+    "skills_cli": "npx skills add divyanshu-iitian/agent-website-design-skills",
+    "manual": "Copy a skill folder into your agent's skills directory."
+  },
+  "machine_readable": {
+    "llms_txt": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/llms.txt",
+    "agents_md": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/AGENTS.md"
+  },
   "skills": [
     {
       "name": "web-visual-direction",
