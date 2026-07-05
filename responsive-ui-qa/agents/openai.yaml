@@ -1,0 +1,4 @@
+interface:
+  display_name: "Responsive UI QA"
+  short_description: "Verify responsive website quality"
+  default_prompt: "Use $responsive-ui-qa to inspect and fix responsive UI issues."

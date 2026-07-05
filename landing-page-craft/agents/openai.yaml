@@ -1,0 +1,4 @@
+interface:
+  display_name: "Landing Page Craft"
+  short_description: "Build compelling landing page flows"
+  default_prompt: "Use $landing-page-craft to design and implement a strong landing page."
