@@ -1,6 +1,6 @@
 {
   "name": "agent-website-design-skills",
-  "description": "Open-source AI agent skills for website design, landing pages, design systems, responsive UI QA, accessibility, and conversion polish.",
+  "description": "Verification-first AI agent skills for visual direction, design systems, landing pages, responsive UI QA, accessibility, and ethical conversion.",
   "repository": "https://github.com/divyanshu-iitian/agent-website-design-skills",
   "license": "MIT",
   "format": "Agent Skills",
@@ -25,42 +25,47 @@
     {
       "name": "web-visual-direction",
       "display_name": "Web Visual Direction",
+      "description": "Define a distinctive, implementable visual direction for websites and web apps. Use when an agent must establish or repair art direction, typography, color, composition, imagery, density, motion, or the first-screen impression before substantial frontend implementation.",
       "path": "web-visual-direction/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-visual-direction/SKILL.md",
-      "default_prompt": "Use $web-visual-direction to define the visual direction for this website.",
-      "tags": ["website-design", "art-direction", "ui-design", "visual-design", "frontend"]
+      "default_prompt": "Use $web-visual-direction to define an implementation-ready visual direction for this website.",
+      "tags": ["website-design", "art-direction", "ui-design", "visual-design", "frontend", "typography"]
     },
     {
       "name": "web-design-system",
       "display_name": "Web Design System",
+      "description": "Extract, create, or refine an implementation-ready design system for a website or web app. Use when an agent needs semantic tokens, component anatomy, variants, interaction states, responsive rules, accessibility defaults, or consistency improvements grounded in an existing frontend codebase.",
       "path": "web-design-system/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-design-system/SKILL.md",
-      "default_prompt": "Use $web-design-system to create a practical design system for this site.",
-      "tags": ["design-system", "design-tokens", "components", "frontend", "accessibility"]
+      "default_prompt": "Use $web-design-system to extract or create a practical design system for this frontend.",
+      "tags": ["design-system", "design-tokens", "components", "frontend", "accessibility", "ui-architecture"]
     },
     {
       "name": "landing-page-craft",
       "display_name": "Landing Page Craft",
+      "description": "Design, implement, or improve a distinctive, conversion-focused landing page or marketing website. Use for homepages, product pages, launch pages, portfolios, pricing pages, waitlists, campaign pages, and other flows that must explain an offer, establish trust, and guide a measurable next action.",
       "path": "landing-page-craft/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/landing-page-craft/SKILL.md",
-      "default_prompt": "Use $landing-page-craft to design and implement a strong landing page.",
-      "tags": ["landing-page", "marketing-site", "conversion", "copywriting", "web-design"]
+      "default_prompt": "Use $landing-page-craft to design and implement this landing page around a clear conversion path.",
+      "tags": ["landing-page", "marketing-site", "conversion", "copywriting", "web-design", "cro"]
     },
     {
       "name": "responsive-ui-qa",
       "display_name": "Responsive UI QA",
+      "description": "Inspect, diagnose, fix, and verify responsive frontend defects across routes, states, containers, and input modes. Use for mobile or desktop QA, overflow, overlap, broken navigation, unstable grids, clipped text, blank media, viewport regressions, screenshot comparison, and post-implementation visual verification.",
       "path": "responsive-ui-qa/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/responsive-ui-qa/SKILL.md",
-      "default_prompt": "Use $responsive-ui-qa to inspect and fix responsive UI issues.",
-      "tags": ["responsive-design", "ui-qa", "mobile", "browser-testing", "frontend"]
+      "default_prompt": "Use $responsive-ui-qa to test, diagnose, and fix this interface across critical viewports.",
+      "tags": ["responsive-design", "ui-qa", "mobile", "browser-testing", "frontend", "visual-regression"]
     },
     {
       "name": "conversion-accessibility-polish",
-      "display_name": "Conversion Accessibility Polish",
+      "display_name": "Conversion & Accessibility Polish",
+      "description": "Improve an existing website or web app's decision clarity, trust, forms, UX copy, and accessibility without dark patterns. Use when an agent must polish CTAs, navigation, pricing, onboarding, empty or error states, keyboard behavior, semantic HTML, focus, contrast, or the end-to-end conversion path.",
       "path": "conversion-accessibility-polish/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/conversion-accessibility-polish/SKILL.md",
-      "default_prompt": "Use $conversion-accessibility-polish to improve this page's conversion and accessibility.",
-      "tags": ["accessibility", "conversion-rate-optimization", "ux-writing", "forms", "a11y"]
+      "default_prompt": "Use $conversion-accessibility-polish to improve this flow without dark patterns or accessibility regressions.",
+      "tags": ["accessibility", "conversion-rate-optimization", "ux-writing", "forms", "a11y", "wcag"]
     }
   ]
 }

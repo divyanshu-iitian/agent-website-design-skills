@@ -1,51 +1,51 @@
 # Agent Website Design Skills
 
-Open-source AI agent skills for website design, landing pages, design systems, responsive UI QA, conversion polish, and accessibility.
+Verification-first Agent Skills for website visual direction, design systems, landing pages, responsive UI QA, accessibility, and ethical conversion.
 
 Repository: https://github.com/divyanshu-iitian/agent-website-design-skills
 Catalog: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/skills.json
 README: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/README.md
 Agent instructions: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/AGENTS.md
 
-## Install
+## Install or Run
 
-Use the Agent Skills CLI when available:
-
-```bash
+Install:
 npx skills add divyanshu-iitian/agent-website-design-skills
-```
 
-Or fetch individual raw SKILL.md files listed below.
+List:
+npx skills add divyanshu-iitian/agent-website-design-skills --list
+
+Run without installing:
+npx skills use divyanshu-iitian/agent-website-design-skills@responsive-ui-qa
 
 ## Skills
 
-- web-visual-direction: Create strong visual direction for websites and web apps. Use for mood, layout language, typography, palette, imagery, art direction, motion feel, and first-screen impression.
-  - Skill file: web-visual-direction/SKILL.md
+- web-visual-direction: Define a distinctive, implementable visual direction before substantial frontend implementation.
+  - File: web-visual-direction/SKILL.md
   - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-visual-direction/SKILL.md
 
-- web-design-system: Create or refine practical website design systems. Use for tokens, component rules, responsive constraints, interaction states, and accessibility defaults.
-  - Skill file: web-design-system/SKILL.md
+- web-design-system: Extract, create, reconcile, or extend semantic tokens and component contracts grounded in an existing frontend.
+  - File: web-design-system/SKILL.md
   - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-design-system/SKILL.md
 
-- landing-page-craft: Design and implement high-quality landing pages and marketing websites. Use for homepages, product pages, launch pages, pricing pages, waitlists, and conversion-focused website flows.
-  - Skill file: landing-page-craft/SKILL.md
+- landing-page-craft: Design and implement a landing page around a clear argument, honest evidence, and measurable action.
+  - File: landing-page-craft/SKILL.md
   - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/landing-page-craft/SKILL.md
 
-- responsive-ui-qa: Verify and fix responsive website UI quality. Use for desktop/mobile QA, overflow, overlap, blank canvases, broken navigation, unstable grids, and viewport-specific regressions.
-  - Skill file: responsive-ui-qa/SKILL.md
+- responsive-ui-qa: Reproduce, diagnose, fix, and verify responsive defects across routes, states, viewports, and input modes.
+  - File: responsive-ui-qa/SKILL.md
   - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/responsive-ui-qa/SKILL.md
 
-- conversion-accessibility-polish: Improve website clarity, conversion, trust, and accessibility. Use for CTAs, forms, navigation, pricing, empty states, contrast, keyboard behavior, semantic HTML, and decision flow.
-  - Skill file: conversion-accessibility-polish/SKILL.md
+- conversion-accessibility-polish: Improve decision clarity, trust, forms, UX copy, and accessibility without dark patterns.
+  - File: conversion-accessibility-polish/SKILL.md
   - Raw: https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/conversion-accessibility-polish/SKILL.md
 
-## Agent Guidance
+## Routing
 
-Load only the skill relevant to the current task. Read its SKILL.md first, then read referenced files only when the skill instructs you to.
+- Unclear visual concept: web-visual-direction
+- Inconsistent tokens or components: web-design-system
+- Marketing or conversion page: landing-page-craft
+- Responsive defect or final visual QA: responsive-ui-qa
+- Existing flow needs trust, form, copy, or accessibility polish: conversion-accessibility-polish
 
-Prefer:
-- web-visual-direction before implementation when the visual concept is unclear.
-- web-design-system when consistency, tokens, components, or interaction states are needed.
-- landing-page-craft for marketing pages and conversion-focused website flows.
-- responsive-ui-qa after frontend changes or when layout bugs are reported.
-- conversion-accessibility-polish near the end of a build for clarity, trust, CTAs, forms, and accessibility.
+Load only the skill needed for the task. Read its SKILL.md first, then only the references it points to. Follow the skill's delivery contract and report what was actually verified.

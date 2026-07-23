@@ -1,21 +1,62 @@
-# QA Checklist
+# Responsive UI QA Matrix
+
+## Suggested Viewports
+
+Adapt to the product and bug. Useful defaults:
+
+- `320 x 568` narrow stress case
+- `375 x 812` common mobile
+- `768 x 1024` tablet or constrained layout
+- `1280 x 800` common laptop
+- `1440 x 900` desktop
+
+Also resize continuously around breakpoints; defects often exist between presets.
 
 ## Layout
 
-No horizontal scroll, accidental overlap, clipped controls, unstable hover states, or content hidden under sticky headers/footers.
+- No unintended page-level horizontal scroll.
+- Long content can shrink, wrap, truncate intentionally, or scroll locally.
+- Sticky/fixed UI does not cover content, focus, or anchor targets.
+- Grid and flex children have correct intrinsic sizing and `min-width`.
+- Dialogs, popovers, menus, and tooltips remain inside the visual viewport.
+- Safe-area insets are respected where full-screen mobile UI requires them.
 
-## Text
+## Content States
 
-Headings fit their containers, buttons do not truncate important labels, long words wrap, and line lengths remain readable.
+- Loading preserves useful geometry and cannot trap focus.
+- Empty state explains context and a valid next action.
+- Error state preserves user input and offers recovery.
+- Long names, URLs, code, prices, dates, badges, and translations remain usable.
+- Missing, portrait, landscape, and oversized media have stable treatment.
 
 ## Interaction
 
-Menus open within the viewport, dialogs fit mobile screens, forms show validation, and focus order follows the visual order.
+- Primary actions work with keyboard and pointer.
+- Focus order follows task order; focus indicators are visible and unobscured.
+- Hover-only information has a keyboard/touch path.
+- Targets are not crowded or hidden behind browser chrome.
+- Forms expose labels, instructions, validation, and status.
+- Back/forward navigation and deep links preserve expected state when relevant.
 
-## Media
+## Visual and Media
 
-Images have stable dimensions, canvas/3D content is nonblank, videos or embeds do not overflow, and placeholders match final dimensions.
+- Images reserve dimensions and use appropriate cropping.
+- Charts remain legible and provide nonvisual meaning where required.
+- Canvas/WebGL/video/embed content is nonblank and resizes correctly.
+- Text and controls remain usable at supported zoom.
+- Theme switching does not produce invisible content or stale colors.
 
-## Accessibility
+## Evidence Log
 
-Contrast is readable, controls have names, tap targets are comfortable, and reduced-motion users are respected.
+For each failure, record:
+
+```text
+Route/state:
+Viewport/container:
+Input mode:
+Severity:
+Reproduction:
+Root cause:
+Fix:
+Retest:
+```

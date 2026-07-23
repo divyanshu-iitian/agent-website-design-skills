@@ -1,35 +1,49 @@
 ---
 name: web-visual-direction
-description: Create strong visual direction for websites and web apps. Use when Codex needs to define or improve a site's mood, layout language, typography, palette, imagery, art direction, motion feel, or first-screen impression before or during implementation.
+description: Define a distinctive, implementable visual direction for websites and web apps. Use when an agent must establish or repair art direction, typography, color, composition, imagery, density, motion, or the first-screen impression before substantial frontend implementation.
 ---
 
 # Web Visual Direction
 
-Use this skill to turn a vague website request into a coherent visual concept that can be implemented without drifting into generic template design.
+Turn an ambiguous brief into one coherent visual system. Make choices that fit the product and can survive implementation; do not produce a mood-board-shaped list of adjectives.
 
 ## Workflow
 
-1. Identify the site type: SaaS/product, portfolio, marketplace, editorial, ecommerce, community, tool, game, or brand page.
-2. Name the audience and job-to-be-done in one sentence.
-3. Choose one primary visual stance, not a list of moods.
-4. Define the first viewport around the actual subject: product UI, service outcome, place, person, object, or interactive experience.
-5. Select typography roles: display, body, labels, numerals. Prefer system fonts unless the project already has a font stack or assets.
-6. Build a palette with contrast and restraint: one background family, one text system, one accent, one status/semantic set. Avoid one-hue-only pages.
-7. Pick imagery rules: real screenshots, product renders, relevant generated bitmap images, editorial photos, icons, diagrams, or no imagery when the product UI itself is the content.
-8. Map spacing density to the domain. Operational products should be compact and scannable; consumer/brand pages can breathe more.
-9. Translate the direction into implementable tokens and component rules before writing UI code.
-10. Verify at desktop and mobile widths that the first screen communicates the offer without overlap, unreadable text, or decorative clutter.
+1. Inspect the product brief and existing code, brand assets, screenshots, content, component library, and constraints. Preserve intentional brand equity.
+2. State the audience, their immediate task, and the feeling the interface should create in one sentence each.
+3. Choose one visual thesis with a useful tension, such as "editorial authority with operational speed." Explain why it fits.
+4. Select two or three relevant references. Extract principles - rhythm, contrast, framing, density - not surface decoration or copyrighted layouts.
+5. Decide the composition before styling details:
+   - identify the first viewport's focal point;
+   - define the grid, content width, density, and section rhythm;
+   - decide what intentionally breaks the grid, if anything.
+6. Define implementation-ready rules for typography, color, surfaces, borders, imagery, icons, and motion.
+7. Express the direction as a small token set and component implications. Reuse the project's existing styling system.
+8. Implement one representative viewport or component when implementation is in scope.
+9. Verify the direction at mobile and desktop widths. Remove choices that weaken comprehension, hierarchy, performance, or accessibility.
 
-## Guardrails
+## Decision Rules
 
-- Lead with the real product, place, person, or outcome.
-- Use cards only for repeated items, modals, and framed tools. Avoid card-inside-card layouts.
-- Avoid gradient blobs, bokeh orbs, and purely atmospheric hero art.
-- Keep headings sized for their container. Hero-scale type belongs only in true hero contexts.
-- Keep letter spacing at `0` unless the existing design system already uses a different value.
-- Use stable dimensions for nav bars, toolbars, grids, and tiles.
-- Prefer lucide or existing icon libraries for controls.
+- Lead with the real product, work, place, person, object, or outcome.
+- Prefer a memorable structural idea over decorative effects.
+- Match density to the job: operational interfaces are compact; narrative brand pages can breathe.
+- Use typography with a reason. Do not ban or choose a font only because it is fashionable.
+- Use cards for meaningful grouping, not as the default container for every sentence.
+- Treat gradients, glass, grain, glow, and oversized type as tools, not proof of design quality.
+- Keep motion purposeful and respect reduced-motion preferences.
+- Do not fabricate brand assets, customer logos, metrics, or product screenshots.
 
-## References
+## Delivery Contract
 
-Read [references/site-archetypes.md](references/site-archetypes.md) when choosing visual direction for a specific website type.
+Return or implement:
+
+1. **Visual thesis** - one sentence.
+2. **Reference principles** - what to borrow and what to avoid.
+3. **Direction spec** - composition, type, palette, surfaces, imagery, icons, and motion.
+4. **Token sketch** - named values or mappings compatible with the codebase.
+5. **Responsive intent** - what changes at narrow and wide widths.
+6. **Proof** - screenshot or inspected viewport when browser access exists.
+
+## Reference
+
+Read [references/site-archetypes.md](references/site-archetypes.md) when the product type should materially change the direction.

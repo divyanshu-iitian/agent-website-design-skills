@@ -1,4 +1,4 @@
 interface:
   display_name: "Responsive UI QA"
-  short_description: "Verify responsive website quality"
-  default_prompt: "Use $responsive-ui-qa to inspect and fix responsive UI issues."
+  short_description: "Find and fix responsive frontend defects"
+  default_prompt: "Use $responsive-ui-qa to test, diagnose, and fix this interface across critical viewports."

@@ -1,32 +1,49 @@
 ---
 name: conversion-accessibility-polish
-description: Improve website clarity, conversion, trust, and accessibility. Use when Codex needs to polish copy, CTAs, forms, navigation, pricing, empty states, contrast, keyboard behavior, semantic HTML, or user decision flow on a website or web app.
+description: Improve an existing website or web app's decision clarity, trust, forms, UX copy, and accessibility without dark patterns. Use when an agent must polish CTAs, navigation, pricing, onboarding, empty or error states, keyboard behavior, semantic HTML, focus, contrast, or the end-to-end conversion path.
 ---
 
-# Conversion Accessibility Polish
+# Conversion and Accessibility Polish
 
-Use this skill near the end of a website build or redesign, when the page exists but needs to become clearer, more trustworthy, and easier to use.
+Improve business outcomes by making the interface clearer, more trustworthy, and easier to operate. Accessibility is a product requirement, not a final visual filter.
 
 ## Workflow
 
-1. Identify the main user action and the doubts that block it.
-2. Audit the page from top to bottom for clarity: headline, supporting copy, CTAs, proof, form labels, pricing language, and error states.
-3. Replace vague claims with concrete outcomes, examples, timeframes, numbers, screenshots, or constraints.
-4. Make CTAs specific and consistent with the destination.
-5. Reduce friction in forms: clear labels, sensible defaults, input types, autocomplete, inline errors, and success states.
-6. Add trust where users make decisions: security, privacy, cancellation, refund, support, compatibility, or usage limits.
-7. Check accessibility: semantic landmarks, headings, labels, focus-visible, keyboard operation, contrast, target size, alt text, and reduced motion.
-8. Keep polish visible in the interface, not as explanatory text about the interface.
-9. Verify on mobile and keyboard-only navigation.
+1. Identify the primary user task, success event, and doubts or access barriers that block it.
+2. Walk the path from entry to success. Include navigation, forms, validation, loading, errors, confirmation, and return visits.
+3. Audit decision clarity:
+   - what the user is choosing;
+   - cost and commitment;
+   - what happens next;
+   - evidence and risk;
+   - how to recover or leave.
+4. Audit semantics and interaction: landmarks, headings, names, labels, descriptions, keyboard order, focus management, announcements, and pointer alternatives.
+5. Audit visual access: contrast, text resize/reflow, focus visibility, target spacing, zoom, motion, and content hidden by sticky UI.
+6. Replace vague or inflated copy with specific outcomes, constraints, examples, and next-step language.
+7. Reduce form friction without removing necessary consent, security, or error prevention.
+8. Place trust information where commitment increases. Keep terms, privacy, cancellation, and destructive effects visible.
+9. Implement the highest-impact fixes first: blocked tasks, misleading decisions, keyboard failures, form failures, then visual polish.
+10. Re-test the complete path on mobile and with keyboard-only navigation. Use automated checks as support, not as proof of conformance.
 
-## Copy Rules
+## Ethical Guardrails
 
-- Prefer concrete nouns and active verbs.
-- Avoid inflated claims unless the page proves them nearby.
-- Use one idea per section heading.
-- Put user benefit before implementation detail unless the audience is technical and evaluating architecture.
-- Keep button text short, but not cryptic.
+- Do not add fake scarcity, hidden fees, confirmshaming, disguised ads, forced continuity, preselected consent, or obstructive cancellation.
+- Do not fabricate testimonials, metrics, security claims, or guarantees.
+- Do not trade away accessibility for a presumed conversion lift.
+- Do not claim WCAG conformance from automated tooling alone.
+- Preserve user input after recoverable errors and make destructive actions explicit.
 
-## References
+## Delivery Contract
 
-Read [references/a11y-conversion-checks.md](references/a11y-conversion-checks.md) when auditing a finished page.
+Provide:
+
+1. **Primary path** - entry -> decision -> action -> success.
+2. **Findings** - severity, affected users, evidence, and relevant standard when known.
+3. **Prioritized fixes** - impact versus effort.
+4. **Implementation** - when changes are requested.
+5. **Verification** - keyboard path, mobile path, form states, and automated/manual checks.
+6. **Honest limits** - what still requires content, legal, analytics, or assistive-technology review.
+
+## Reference
+
+Read [references/a11y-conversion-checks.md](references/a11y-conversion-checks.md) for a practical WCAG 2.2 AA-oriented audit and ethical conversion checklist.

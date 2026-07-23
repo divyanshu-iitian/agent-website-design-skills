@@ -1,4 +1,4 @@
 interface:
-  display_name: "Conversion Accessibility Polish"
-  short_description: "Improve clarity, trust, and accessibility"
-  default_prompt: "Use $conversion-accessibility-polish to improve this page's conversion and accessibility."
+  display_name: "Conversion & Accessibility Polish"
+  short_description: "Improve clarity, trust, and accessible UX"
+  default_prompt: "Use $conversion-accessibility-polish to improve this flow without dark patterns or accessibility regressions."

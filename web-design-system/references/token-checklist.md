@@ -1,25 +1,56 @@
-# Token Checklist
+# Design System Contract Checklist
 
-## Color
+## Foundations
 
-Define background, surface, border, text, muted text, accent, accent foreground, destructive, warning, success, info, focus ring, and selection colors.
+### Color
 
-## Type
+- Canvas, elevated surface, inset surface
+- Primary, secondary, muted, inverse text
+- Default, strong, subtle, interactive borders
+- Primary and secondary actions with foregrounds
+- Focus, selection, overlay
+- Success, warning, danger, and info with foreground/surface/border roles
 
-Define font family, body size, compact label size, page title, section title, card title, line height, and numeric/tabular treatment.
+Check every role in each supported theme. Do not assume a light-theme value can simply be inverted.
 
-## Spacing
+### Typography
 
-Use a small scale such as `4, 8, 12, 16, 24, 32, 48, 64`. Prefer layout-specific constraints over arbitrary margins.
+- Interface and content font families
+- Body, compact, label, title, display, code, and numeric roles
+- Weight, line height, tracking, wrapping, truncation, and tabular-number behavior
+- Readable defaults for dense UI and long-form content
 
-## Radius and Borders
+### Geometry and Layout
 
-Use one default radius and one small radius. Use borders to separate dense operational content before reaching for shadows.
+- Small spacing scale and deliberate exceptions
+- Container widths, gutters, grid gaps, sidebars, toolbars, dialogs, and reading width
+- Radius, border width, icon sizes, control heights, and target sizes
+- Layering model for sticky UI, menus, dialogs, toasts, and tooltips
 
-## Motion
+### Elevation and Motion
 
-Use short transitions for state changes. Respect reduced motion. Avoid motion that delays task completion.
+- Prefer borders and surface contrast before shadows in dense interfaces
+- Define only the elevation levels the product uses
+- Define duration/easing by intent: feedback, enter/exit, layout transition
+- Provide reduced-motion behavior
 
-## Layout
+## Component Contract
 
-Define content max widths, sidebar widths, toolbar heights, grid gaps, tile aspect ratios, and modal widths.
+For each shared component, record:
+
+- semantic element and accessible name;
+- anatomy and required/optional slots;
+- variants and sizes;
+- default, hover, focus-visible, active, selected, disabled, loading, invalid, and destructive states;
+- keyboard interactions;
+- content limits and overflow behavior;
+- narrow-container behavior;
+- theme-specific exceptions.
+
+## Migration Checks
+
+- No duplicate source of truth was introduced.
+- Literal colors and spacing values were removed only where semantics are clear.
+- Existing consumers retain behavior or receive an explicit migration.
+- Screenshots or visual tests cover representative themes and states.
+- Deprecated tokens/components have a removal plan.

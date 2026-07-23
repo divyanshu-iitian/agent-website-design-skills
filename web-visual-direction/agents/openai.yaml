@@ -1,4 +1,4 @@
 interface:
   display_name: "Web Visual Direction"
-  short_description: "Shape polished website visual direction"
-  default_prompt: "Use $web-visual-direction to define the visual direction for this website."
+  short_description: "Define a distinctive, buildable visual direction"
+  default_prompt: "Use $web-visual-direction to define an implementation-ready visual direction for this website."

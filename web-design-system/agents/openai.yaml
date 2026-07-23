@@ -1,4 +1,4 @@
 interface:
   display_name: "Web Design System"
-  short_description: "Create practical web design systems"
-  default_prompt: "Use $web-design-system to create a practical design system for this site."
+  short_description: "Build a coherent, usable web design system"
+  default_prompt: "Use $web-design-system to extract or create a practical design system for this frontend."

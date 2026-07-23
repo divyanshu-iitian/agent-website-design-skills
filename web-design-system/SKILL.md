@@ -1,34 +1,55 @@
 ---
 name: web-design-system
-description: Create or refine practical website design systems for agents building frontend UIs. Use when Codex needs tokens, component rules, layout patterns, responsive constraints, interaction states, accessibility defaults, or consistency guidance for a web project.
+description: Extract, create, or refine an implementation-ready design system for a website or web app. Use when an agent needs semantic tokens, component anatomy, variants, interaction states, responsive rules, accessibility defaults, or consistency improvements grounded in an existing frontend codebase.
 ---
 
 # Web Design System
 
-Use this skill to make frontend work consistent, scalable, and implementation-ready without inventing a heavy design system.
+Build the smallest system that makes the product more coherent. Favor semantic contracts that components can use over a large inventory of decorative values.
+
+## Choose the Mode
+
+- **Extract** when the product is visually coherent but undocumented.
+- **Reconcile** when multiple patterns conflict.
+- **Create** when a new product has no established UI language.
+- **Extend** when a feature needs states or components the system lacks.
 
 ## Workflow
 
-1. Inspect the existing app first: framework, CSS approach, component library, icon library, color tokens, spacing scale, and naming conventions.
-2. Preserve local patterns unless they block clarity, accessibility, or maintainability.
-3. Define the smallest useful token set: color, type, spacing, radius, border, shadow, z-index, motion, and layout widths.
-4. Create component rules for buttons, inputs, selects, tabs, menus, cards, tables, empty states, dialogs, tooltips, and toasts.
-5. Define states for hover, focus-visible, active, disabled, loading, selected, invalid, success, warning, and destructive actions.
-6. Specify responsive behavior using grid tracks, min/max widths, aspect ratios, and container constraints.
-7. Document accessibility defaults: semantic HTML, labels, keyboard states, contrast, reduced motion, and error messaging.
-8. Implement tokens near the existing styling system: CSS variables, Tailwind theme, design tokens file, or component theme config.
-9. Add examples only where they prevent misuse. Keep the system compact.
-10. Verify by updating at least one real screen or component set to use the rules.
+1. Inspect the framework, CSS strategy, theme files, primitives, component library, icon set, and representative screens.
+2. Inventory repeated values and patterns. Separate intentional variation from accidental drift.
+3. Map raw values to semantic roles before changing code. Example: `blue-600` -> `action-primary`, not "replace every blue."
+4. Define the minimum token layers:
+   - foundations: color, type, spacing, radius, border, shadow, motion;
+   - semantic tokens: background, surface, text, border, action, focus, and status;
+   - component tokens only where a component genuinely needs them.
+5. Specify component anatomy, variants, sizes, and state behavior. Include content constraints, not only appearance.
+6. Define responsive behavior and density rules without inventing device-specific duplicates.
+7. Encode accessibility defaults: semantic elements, names, labels, focus-visible, keyboard behavior, contrast, errors, target size, and reduced motion.
+8. Implement inside the existing styling mechanism. Avoid parallel token systems.
+9. Migrate one representative component or screen and remove superseded values when safe.
+10. Verify light/dark themes, core states, narrow/wide layouts, and at least one realistic content stress case.
 
-## Component Rules
+## System Rules
 
-- Use icon buttons for common tools when a familiar symbol exists; add accessible labels and tooltips where needed.
-- Keep border radius at `8px` or less unless the existing system clearly uses a different radius.
-- Do not nest cards inside cards.
-- Use tables or dense lists for operational comparison tasks instead of decorative grids.
-- Keep form labels visible or programmatically associated.
-- Use semantic color for meaning, not decoration.
+- Name tokens by purpose, not by current appearance.
+- Keep primitive escape hatches available, but make the correct path easier.
+- Do not force every region into a card.
+- Do not encode status through color alone.
+- Keep component APIs small; prefer composition over variant explosions.
+- Preserve established patterns unless they harm usability, accessibility, or maintainability.
+- Document decisions where future contributors would otherwise recreate the inconsistency.
 
-## References
+## Delivery Contract
 
-Read [references/token-checklist.md](references/token-checklist.md) when creating or auditing a token set.
+Provide:
+
+1. **Mode and audit** - what exists, what conflicts, and what remains.
+2. **Token map** - existing value -> semantic role -> implementation location.
+3. **Component contract** - anatomy, variants, states, content limits, responsive behavior.
+4. **Migration slice** - at least one real component when code changes are requested.
+5. **Verification evidence** - themes, states, viewports, and exceptions tested.
+
+## Reference
+
+Read [references/token-checklist.md](references/token-checklist.md) while defining or auditing tokens and component states.

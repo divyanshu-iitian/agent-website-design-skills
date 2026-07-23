@@ -1,25 +1,53 @@
-# Site Archetypes
+# Site Archetype Heuristics
+
+Use these as starting constraints, not visual presets.
 
 ## SaaS and Operational Tools
 
-Use quiet, dense, structured interfaces. Prioritize navigation, tables, filters, sidebars, status chips, and repeatable workflows. Avoid marketing-heavy cards on the primary app screen.
+- Optimize for scanning, comparison, repeated actions, and state recognition.
+- Make navigation, tables, filters, timelines, sidebars, and status language visually dependable.
+- Establish hierarchy through density, alignment, and contrast before adding containers.
+- Show realistic data and edge states when permitted; otherwise label placeholders honestly.
 
 ## AI Products
 
-Show the input/output loop, model result, trace, evaluation, or workflow state. Avoid vague magic visuals. Trust comes from showing control, latency, cost, safety, and review states.
+- Make the input -> processing -> output loop legible.
+- Expose relevant control, latency, provenance, cost, review, and failure states.
+- Prefer real output examples, traces, evaluations, or workflow diagrams to "magic" imagery.
+- Separate generated content from user-authored or verified content.
 
-## Portfolios
+## Developer Tools
 
-Lead with the person's work, role, and strongest project. Use large project imagery, restrained copy, and clear case-study navigation. Avoid over-designed intros that delay the work.
+- Prioritize code, logs, diffs, commands, and system state.
+- Use stable monospace treatment where it improves alignment; do not make the entire interface code-themed by reflex.
+- Support keyboard use, dense information, long identifiers, and copy actions.
 
-## Ecommerce
+## Portfolios and Personal Sites
 
-Make product inspection easy: images, price, variants, availability, shipping, reviews, and add-to-cart should be visible without hunting. Visual polish must not hide commercial facts.
+- Lead with the person's name, role, strongest work, and evidence of craft.
+- Let project media and case-study decisions carry the visual identity.
+- Avoid intros that delay access to the work or imitate agency templates.
 
-## Editorial and Content
+## Ecommerce and Marketplaces
 
-Typography, rhythm, hierarchy, and media captions carry the experience. Build strong reading width, table of contents behavior, and image treatment.
+- Make inspection and comparison easy: imagery, price, variants, availability, shipping, reviews, and action.
+- Keep commercial facts visible and comparable.
+- Build trust around returns, payment, seller identity, and fulfillment.
+
+## Editorial and Documentation
+
+- Let typography, reading width, rhythm, navigation, captions, and code/media treatment form the system.
+- Design for long titles, deep hierarchies, search, tables of contents, and link states.
+- Preserve reading position and make structure easy to skim.
+
+## Hospitality, Places, and Events
+
+- Make the place or event tangible through specific imagery, dates, location, availability, and atmosphere.
+- Surface booking or attendance constraints before decorative storytelling.
+- Treat maps, schedules, menus, and accessibility information as primary content.
 
 ## Games and Interactive Experiences
 
-Make the playable scene or primary interaction the first screen. UI chrome should support play, not decorate around it.
+- Make the playable scene or primary interaction the focal point.
+- Keep HUD and controls subordinate but discoverable.
+- Verify loading, empty, paused, failure, and reduced-motion experiences.
