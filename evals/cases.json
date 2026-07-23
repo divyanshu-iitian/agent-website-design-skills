@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "purpose": "Qualitative forward-test cases for observable skill behavior. These cases do not claim automated design quality or benchmark scores.",
+  "cases": [
+    {
+      "id": "visual-direction-ai-ops",
+      "skill": "web-visual-direction",
+      "prompt": "Define a visual direction for an AI incident-response product used by on-call engineers. The existing app has dense tables, logs, and a navy brand color.",
+      "must_observe": [
+        "one coherent visual thesis tied to on-call work",
+        "existing brand and operational density are preserved",
+        "first viewport and responsive intent are specified",
+        "decisions map to implementable tokens or component rules"
+      ],
+      "must_not_observe": [
+        "a list of unrelated aesthetics",
+        "vague AI magic imagery",
+        "a recommendation to replace the product UI with marketing cards"
+      ]
+    },
+    {
+      "id": "visual-direction-portfolio",
+      "skill": "web-visual-direction",
+      "prompt": "Create a visual direction for a documentary photographer's portfolio with strong existing work but no established website identity.",
+      "must_observe": [
+        "the photography remains the focal evidence",
+        "typography and composition support the work",
+        "reference principles are separated from imitation",
+        "mobile image and navigation behavior are addressed"
+      ],
+      "must_not_observe": [
+        "generic agency copy",
+        "decorative effects that obscure photographs"
+      ]
+    },
+    {
+      "id": "design-system-reconcile",
+      "skill": "web-design-system",
+      "prompt": "Reconcile three button implementations and two competing color-token files in an existing React app without redesigning the product.",
+      "must_observe": [
+        "reconcile mode is selected",
+        "existing consumers and migration risk are inspected",
+        "semantic roles replace accidental raw-value coupling",
+        "button anatomy, variants, states, and accessibility are defined"
+      ],
+      "must_not_observe": [
+        "a parallel token system",
+        "unrelated visual redesign",
+        "blind replacement of every matching color"
+      ]
+    },
+    {
+      "id": "design-system-new-feature",
+      "skill": "web-design-system",
+      "prompt": "Extend an existing design system with a destructive confirmation dialog and async loading behavior.",
+      "must_observe": [
+        "existing dialog and action patterns are inspected",
+        "focus management and keyboard behavior are specified",
+        "loading, error, cancellation, and destructive states are covered",
+        "one representative implementation is verified when code is in scope"
+      ],
+      "must_not_observe": [
+        "color-only danger communication",
+        "a variant explosion disconnected from real states"
+      ]
+    },
+    {
+      "id": "landing-page-devtool",
+      "skill": "landing-page-craft",
+      "prompt": "Build a launch page for a local-first API client. We have a working product screenshot and no customer logos or metrics yet.",
+      "must_observe": [
+        "a conversion brief and page argument",
+        "the product screenshot is used as evidence",
+        "claims are narrowed to available proof",
+        "CTA destinations and success behavior are explicit"
+      ],
+      "must_not_observe": [
+        "fabricated logos, testimonials, or metrics",
+        "fake urgency",
+        "repeated feature-card sections without a decision purpose"
+      ]
+    },
+    {
+      "id": "landing-page-pricing",
+      "skill": "landing-page-craft",
+      "prompt": "Improve a pricing page where users do not understand annual billing, seat minimums, or what happens after starting a trial.",
+      "must_observe": [
+        "material terms appear before commitment",
+        "CTA copy predicts the next step",
+        "objections and risk are mapped near relevant actions",
+        "form, loading, error, and success paths are verified"
+      ],
+      "must_not_observe": [
+        "hidden renewal details",
+        "preselected consent",
+        "visual hierarchy that disguises the more expensive commitment"
+      ]
+    },
+    {
+      "id": "responsive-long-identifiers",
+      "skill": "responsive-ui-qa",
+      "prompt": "A repository dashboard overflows at 390px when branch names and commit hashes are long. Reproduce and fix it.",
+      "must_observe": [
+        "the exact route, state, and viewport are reproduced",
+        "intrinsic sizing and min-width constraints are inspected",
+        "long and unbroken content is stress-tested",
+        "the failed width and adjacent widths are retested"
+      ],
+      "must_not_observe": [
+        "global overflow hidden",
+        "unreadably small text",
+        "a one-off pixel offset without root-cause analysis"
+      ]
+    },
+    {
+      "id": "responsive-dialog-keyboard",
+      "skill": "responsive-ui-qa",
+      "prompt": "A mobile settings dialog fits visually but its final control is hidden behind a sticky action bar during keyboard navigation.",
+      "must_observe": [
+        "focus and sticky-content interaction are reproduced",
+        "severity and root cause are reported",
+        "keyboard and mobile viewport behavior are both retested",
+        "before and after evidence is recorded"
+      ],
+      "must_not_observe": [
+        "testing only the default mouse state",
+        "removing the control to make the screenshot fit"
+      ]
+    },
+    {
+      "id": "accessibility-signup",
+      "skill": "conversion-accessibility-polish",
+      "prompt": "Audit a signup form with placeholder-only labels, password errors shown only in red, and an automatically checked marketing box.",
+      "must_observe": [
+        "programmatic labels and useful errors are required",
+        "meaning is not conveyed through color alone",
+        "preselected consent is removed",
+        "keyboard, error, and success paths are verified"
+      ],
+      "must_not_observe": [
+        "a WCAG conformance claim from automation alone",
+        "conversion advice that preserves deceptive consent"
+      ]
+    },
+    {
+      "id": "accessibility-cancellation",
+      "skill": "conversion-accessibility-polish",
+      "prompt": "Improve a subscription cancellation flow that hides the final action, repeatedly asks users to stay, and loses focus when a retention dialog opens.",
+      "must_observe": [
+        "the complete cancellation path is mapped",
+        "obstructive cancellation is identified as a dark pattern",
+        "dialog focus management and recovery are fixed",
+        "commitment and completion states are clear"
+      ],
+      "must_not_observe": [
+        "confirmshaming",
+        "additional deceptive friction",
+        "an accessibility tradeoff justified by retention"
+      ]
+    }
+  ]
+}

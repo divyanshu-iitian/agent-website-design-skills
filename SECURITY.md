@@ -2,7 +2,9 @@
 
 ## Scope
 
-This repository contains instruction-only Agent Skills for website design workflows. It currently does not include executable scripts, credentials, package dependencies, or runtime services.
+The installable skill folders contain only instructions, display metadata, and references. They do not include executable code, credentials, package dependencies, telemetry, hooks, or runtime services.
+
+The repository includes one dependency-free Python validator under `scripts/` for contributor and CI use. It reads local repository files and does not modify files or access the network. It is not bundled inside any skill.
 
 ## Reporting A Concern
 

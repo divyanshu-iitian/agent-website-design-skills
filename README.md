@@ -1,154 +1,184 @@
+<div align="center">
+
 # Agent Website Design Skills
 
-Professional **AI agent skills for website design**: visual direction, design systems, landing pages, responsive UI QA, accessibility, and conversion polish.
+**A verification-first design toolkit for AI coding agents.**
 
-These skills give Codex-style coding agents practical design judgment for shipping web experiences that feel specific, usable, responsive, and credible.
+Give Codex, Claude Code, Cursor, Copilot, Gemini CLI, OpenCode, and other compatible agents stronger judgment for visual direction, design systems, landing pages, responsive QA, accessibility, and ethical conversion.
 
-[![Skills](https://img.shields.io/badge/skills-5-2563eb)](#skill-catalog)
-[![AI Ready](https://img.shields.io/badge/AI-ready-111827)](llms.txt)
+[![skills.sh](https://skills.sh/b/divyanshu-iitian/agent-website-design-skills)](https://skills.sh/divyanshu-iitian/agent-website-design-skills)
+[![Validate skills](https://github.com/divyanshu-iitian/agent-website-design-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/divyanshu-iitian/agent-website-design-skills/actions/workflows/validate.yml)
+[![GitHub stars](https://img.shields.io/github/stars/divyanshu-iitian/agent-website-design-skills?style=flat&logo=github)](https://github.com/divyanshu-iitian/agent-website-design-skills/stargazers)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/divyanshu-iitian/agent-website-design-skills?style=social)](https://github.com/divyanshu-iitian/agent-website-design-skills/stargazers)
 
-## What This Solves
+[Install](#install) · [Choose a skill](#choose-a-skill) · [Use the full workflow](#full-website-workflow) · [Contribute](CONTRIBUTING.md)
 
-AI agents can generate frontend code quickly, but the results often miss the work that makes websites feel professional:
+</div>
 
-- generic hero sections with weak hierarchy
-- inconsistent spacing, color, type, and component states
-- mobile overflow, clipped text, and broken responsive layouts
-- vague copy, unclear CTAs, and low-trust conversion flows
-- accessibility gaps in forms, navigation, focus states, and semantics
+## Why this exists
 
-This repo packages reusable website design workflows as compact, agent-readable skills.
+AI can produce frontend code quickly. The hard part is making the result:
 
-## Who It Is For
+- specific to the product instead of a generic template;
+- coherent across typography, color, layout, components, and states;
+- honest and convincing without fake proof or dark patterns;
+- resilient across real content, mobile widths, keyboard use, and failure states;
+- verified in the browser instead of declared finished from source code alone.
 
-- Developers using Codex, Claude Code, Cursor, GitHub Copilot, Gemini CLI, OpenCode, or other skill-compatible agents.
-- Builders who want AI-generated websites to look less generic and behave better across devices.
-- Teams creating repeatable frontend design standards for AI-assisted development.
-
-## Skill Catalog
-
-| Skill | Best for | Default prompt |
-| --- | --- | --- |
-| [`web-visual-direction`](web-visual-direction/SKILL.md) | Art direction, typography, palette, imagery, first viewport | `Use $web-visual-direction to define the visual direction for this website.` |
-| [`web-design-system`](web-design-system/SKILL.md) | Tokens, components, interaction states, layout rules | `Use $web-design-system to create a practical design system for this site.` |
-| [`landing-page-craft`](landing-page-craft/SKILL.md) | Homepages, product pages, waitlists, pricing pages, launch sites | `Use $landing-page-craft to design and implement a strong landing page.` |
-| [`responsive-ui-qa`](responsive-ui-qa/SKILL.md) | Mobile/desktop QA, overflow, overlap, broken responsive states | `Use $responsive-ui-qa to inspect and fix responsive UI issues.` |
-| [`conversion-accessibility-polish`](conversion-accessibility-polish/SKILL.md) | CTAs, forms, copy clarity, trust, keyboard behavior, semantic HTML | `Use $conversion-accessibility-polish to improve this page's conversion and accessibility.` |
+These five focused skills encode that missing workflow. Each one has a clear delivery contract, one-level references, and explicit verification steps while staying small enough for an agent context window.
 
 ## Install
 
-If your agent supports the Agent Skills CLI:
+Install the complete collection with the open [`skills`](https://github.com/vercel-labs/skills) CLI:
 
 ```bash
 npx skills add divyanshu-iitian/agent-website-design-skills
 ```
 
-Install one skill:
+Install one skill globally for Codex:
 
 ```bash
-npx skills add divyanshu-iitian/agent-website-design-skills --skill landing-page-craft
+npx skills add divyanshu-iitian/agent-website-design-skills \
+  --skill landing-page-craft \
+  --agent codex \
+  --global \
+  --yes
 ```
 
-Manual install:
+Try a skill without installing it:
 
 ```bash
-cp -R web-visual-direction ~/.codex/skills/
-cp -R web-design-system ~/.codex/skills/
+npx skills use divyanshu-iitian/agent-website-design-skills@responsive-ui-qa
+```
+
+List everything the CLI discovers:
+
+```bash
+npx skills add divyanshu-iitian/agent-website-design-skills --list
+```
+
+<details>
+<summary>Manual installation</summary>
+
+Copy any skill folder into the skills directory used by your agent:
+
+```bash
 cp -R landing-page-craft ~/.codex/skills/
-cp -R responsive-ui-qa ~/.codex/skills/
-cp -R conversion-accessibility-polish ~/.codex/skills/
 ```
 
-For Windows PowerShell:
+Windows PowerShell:
 
 ```powershell
 Copy-Item -Recurse .\landing-page-craft "$env:USERPROFILE\.codex\skills\"
 ```
 
-## Quick Start
+</details>
 
-Ask your coding agent:
+## Choose a skill
 
-```text
-Use $web-visual-direction to create a visual direction for a premium AI SaaS homepage.
-Use $landing-page-craft to implement the homepage.
-Use $responsive-ui-qa to verify mobile and desktop layouts.
-Use $conversion-accessibility-polish to improve CTAs, forms, trust, and accessibility.
-```
+| Skill | Use it when you need | What it must deliver |
+| --- | --- | --- |
+| [`web-visual-direction`](web-visual-direction/SKILL.md) | A distinctive art direction before substantial implementation | Visual thesis, reference principles, direction spec, token sketch, responsive intent, proof |
+| [`web-design-system`](web-design-system/SKILL.md) | Tokens and components that must become consistent and maintainable | Audit mode, semantic token map, component contracts, migration slice, verification |
+| [`landing-page-craft`](landing-page-craft/SKILL.md) | A homepage, product, pricing, launch, portfolio, campaign, or waitlist page | Conversion brief, page argument, evidence map, CTA map, implemented flow, verification |
+| [`responsive-ui-qa`](responsive-ui-qa/SKILL.md) | Responsive defects or final cross-viewport frontend QA | Test matrix, severity, root causes, fixes, before/after evidence, residual risk |
+| [`conversion-accessibility-polish`](conversion-accessibility-polish/SKILL.md) | An existing flow needs clearer decisions, better trust, forms, and accessibility | Primary path, prioritized findings, ethical fixes, keyboard/mobile verification, honest limits |
 
-For an existing app:
-
-```text
-Use $web-design-system to extract a practical design system from this codebase, then apply it to the dashboard.
-```
-
-## AI Discovery
-
-Machine-readable entry points:
-
-- [`llms.txt`](llms.txt): concise map for LLMs and AI agents.
-- [`skills.json`](skills.json): structured catalog with skill names, paths, raw URLs, prompts, and tags.
-- [`AGENTS.md`](AGENTS.md): instructions for coding agents working in this repository.
-
-Raw fetch URLs:
+### Quick prompts
 
 ```text
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/llms.txt
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/skills.json
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/AGENTS.md
+Use $web-visual-direction to define an implementation-ready direction for this product.
+
+Use $web-design-system to reconcile the inconsistent tokens and component states in this app.
+
+Use $landing-page-craft to redesign this homepage around a clear conversion path. Do not invent proof.
+
+Use $responsive-ui-qa to reproduce and fix the mobile overflow, then show before/after evidence.
+
+Use $conversion-accessibility-polish to audit this signup flow for decision clarity, keyboard access, and dark patterns.
 ```
 
-Raw skill URLs:
+## Full website workflow
+
+Use only the stages the project needs:
+
+```mermaid
+flowchart LR
+    A[Understand product and audience] --> B[web-visual-direction]
+    B --> C[web-design-system]
+    C --> D[landing-page-craft]
+    D --> E[responsive-ui-qa]
+    E --> F[conversion-accessibility-polish]
+    F --> G[Verified handoff]
+```
+
+Example orchestration prompt:
 
 ```text
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-visual-direction/SKILL.md
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/web-design-system/SKILL.md
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/landing-page-craft/SKILL.md
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/responsive-ui-qa/SKILL.md
-https://raw.githubusercontent.com/divyanshu-iitian/agent-website-design-skills/main/conversion-accessibility-polish/SKILL.md
+Use $web-visual-direction to establish the concept, $web-design-system to encode it,
+and $landing-page-craft to implement the page. Then use $responsive-ui-qa and
+$conversion-accessibility-polish for browser evidence, keyboard checks, and the final handoff.
+Preserve the existing stack and do not fabricate product claims or customer proof.
 ```
 
-## Repository Structure
+## Design principles
+
+- **Product before decoration.** Show the real task, object, work, or outcome.
+- **Decisions before sections.** Every screen and section should answer a user question.
+- **Semantics before raw values.** Systems should encode purpose, not merely today’s color.
+- **Root causes before patches.** Responsive fixes must survive adjacent widths and content stress.
+- **Access before presumed lift.** Conversion work must not add deception or exclude users.
+- **Evidence before “done.”** Verify critical routes, states, viewports, and input modes.
+
+## Open and inspectable
+
+- Skills contain Markdown instructions, YAML display metadata, and focused references.
+- No skill contains executable code, telemetry, network calls, or hidden hooks.
+- [`skills.json`](skills.json) exposes the catalog for tools.
+- [`llms.txt`](llms.txt) provides a compact agent-readable map.
+- [`AGENTS.md`](AGENTS.md) explains repository-level behavior.
+- [`evals/cases.json`](evals/cases.json) defines realistic qualitative prompts and observable pass/fail signals without inventing benchmark scores.
+- CI validates every skill, catalog entry, reference link, and display metadata file.
+
+## Repository layout
 
 ```text
-agent-website-design-skills/
-  web-visual-direction/
-    SKILL.md
-    agents/openai.yaml
-    references/
-  web-design-system/
-  landing-page-craft/
-  responsive-ui-qa/
-  conversion-accessibility-polish/
-  AGENTS.md
-  llms.txt
-  skills.json
+.
+├── web-visual-direction/
+├── web-design-system/
+├── landing-page-craft/
+├── responsive-ui-qa/
+├── conversion-accessibility-polish/
+├── evals/cases.json
+├── scripts/validate_repo.py
+├── skills.json
+├── llms.txt
+└── AGENTS.md
 ```
 
-Each skill is intentionally small and uses progressive disclosure: agents load the skill metadata first, then `SKILL.md`, then references only when needed.
+Each skill uses progressive disclosure:
 
-## Quality Principles
+1. `name` and `description` are available for discovery.
+2. `SKILL.md` loads only when the skill matches the request.
+3. `references/` loads only when the workflow points to it.
 
-- Specific over generic: every page should communicate a real product, person, place, or outcome.
-- Usable over decorative: layout, hierarchy, responsiveness, and accessibility come first.
-- Compact over bloated: skill files stay short enough for agent context windows.
-- Verifiable over vibes: responsive QA and browser screenshots are part of the workflow.
-- Safe to inspect: no hidden scripts, no network calls, no destructive actions.
+## Validate locally
 
-## Keywords
+```bash
+python scripts/validate_repo.py
+npx skills add . --list
+```
 
-AI agent skills, Agent Skills, Codex skills, Claude Code skills, Cursor skills, GitHub Copilot skills, Gemini CLI skills, website design, web design, AI web design, landing page design, design system, design tokens, frontend design, responsive design, UI QA, accessibility audit, conversion rate optimization, UX writing, AI frontend agent.
+The repository validator uses only the Python standard library. It checks skill frontmatter, naming, catalog synchronization, relative Markdown links, `agents/openai.yaml`, default prompt references, and eval coverage.
 
 ## Contributing
 
-Contributions are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for skill quality rules and PR expectations.
+Focused improvements and realistic test cases are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing a new skill or changing a delivery contract.
 
-## Security
+## Standards and ecosystem
 
-These skills are instruction-only and contain no executable scripts. If you find unsafe guidance or a security concern, see [`SECURITY.md`](SECURITY.md).
+The repository follows the open Agent Skills folder format and is installable through the `skills` CLI. Accessibility guidance is oriented toward [WCAG 2.2](https://www.w3.org/TR/WCAG22/), while recognizing that automated checks alone cannot establish conformance.
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE).
+[MIT](LICENSE) © Divyanshu Mishra.

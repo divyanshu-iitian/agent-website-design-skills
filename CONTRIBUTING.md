@@ -12,6 +12,8 @@ Good contributions improve practical website design outcomes for AI coding agent
 - useful one-level reference files
 - machine-readable catalog improvements
 - examples that help agents choose the right skill
+- realistic edge cases that improve a skill's delivery contract
+- qualitative eval cases with observable positive and negative behavior
 
 ## What To Avoid
 
@@ -33,9 +35,17 @@ Each skill must:
 5. Keep `SKILL.md` concise and action-oriented.
 6. Link references directly from `SKILL.md`.
 7. Keep references one level deep.
-8. Include `agents/openai.yaml` with display metadata.
+8. Include `agents/openai.yaml` with synchronized display metadata.
+9. State an observable delivery contract and honest verification limits.
 
 ## Validation
+
+Run the repository validator and CLI discovery check:
+
+```bash
+python scripts/validate_repo.py
+npx skills add . --list
+```
 
 Run the Codex skill validator when available:
 
@@ -51,7 +61,8 @@ Before submitting:
 
 - Explain what changed and why.
 - List which skills were changed.
-- Confirm validation passed.
+- Confirm repository validation and CLI discovery passed.
+- Explain how the change improves observable agent output.
 - Keep PRs focused.
 
 ## New Skills
